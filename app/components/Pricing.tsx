@@ -7,7 +7,7 @@ const plans = [
     price: "$50",
     description: "Perfect for solo developers and personal projects.",
     features: ["1 seat", "5 projects", "Community support", "Basic analytics"],
-    priceId: "price_basic_placeholder",
+    priceId: process.env.STRIPE_PRICE_ID_BASIC!,
   },
   {
     name: "Pro",
@@ -20,7 +20,7 @@ const plans = [
       "Advanced analytics",
       "Custom integrations",
     ],
-    priceId: "price_pro_placeholder",
+    priceId: process.env.STRIPE_PRICE_ID_PRO!,
     highlighted: true,
   },
 ];

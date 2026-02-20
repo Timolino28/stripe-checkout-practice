@@ -1,5 +1,7 @@
 "use client";
 
+import { createCheckoutSession } from "@/app/actions/createCheckoutSessions";
+
 interface PricingCardProps {
   name: string;
   price: string;
@@ -14,6 +16,7 @@ export default function PricingCard({
   price,
   description,
   features,
+  priceId,
   highlighted = false,
 }: PricingCardProps) {
   return (
@@ -79,14 +82,12 @@ export default function PricingCard({
         ))}
       </ul>
 
-      {/* TODO: wire up createCheckoutSession server action in the next step */}
       <button
         type="button"
         className={`w-full cursor-not-allowed rounded-xl py-3 text-sm font-semibold transition-opacity hover:opacity-90 ${
-          highlighted
-            ? "bg-white text-indigo-600"
-            : "bg-indigo-600 text-white"
+          highlighted ? "bg-white text-indigo-600" : "bg-indigo-600 text-white"
         }`}
+        onClick={() => createCheckoutSession({ priceId })}
       >
         Get started with {name}
       </button>
