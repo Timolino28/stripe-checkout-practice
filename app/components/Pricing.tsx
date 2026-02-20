@@ -4,19 +4,14 @@ import PricingCard from "@/app/components/PricingCard";
 const plans = [
   {
     name: "Basic",
-    price: "$9",
+    price: "$50",
     description: "Perfect for solo developers and personal projects.",
-    features: [
-      "1 seat",
-      "5 projects",
-      "Community support",
-      "Basic analytics",
-    ],
+    features: ["1 seat", "5 projects", "Community support", "Basic analytics"],
     priceId: "price_basic_placeholder",
   },
   {
     name: "Pro",
-    price: "$29",
+    price: "$100",
     description: "Built for teams that need more power and flexibility.",
     features: [
       "Up to 10 seats",
