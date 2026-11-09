@@ -28,15 +28,6 @@ const plans = [
 export default function Pricing() {
   return (
     <section className="w-full max-w-4xl px-4">
-      <div className="mb-16 text-center">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900">
-          Simple, transparent pricing
-        </h2>
-        <p className="mt-3 text-gray-500">
-          No hidden fees. No surprises. Cancel any time.
-        </p>
-      </div>
-
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
         {plans.map((plan) => (
           <PricingCard key={plan.name} {...plan} />
