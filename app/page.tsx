@@ -6,7 +6,7 @@ export default function Home() {
       {/* Hero */}
       <section className="mb-24 max-w-2xl text-center">
         <span className="inline-flex items-center rounded-full bg-indigo-50 px-4 py-1.5 text-sm font-medium text-indigo-700 ring-1 ring-inset ring-indigo-200">
-          Stripe Checkout Practice
+          Stripe Checkout Example
         </span>
         <h1 className="mt-6 text-5xl font-bold tracking-tight text-gray-900">
           A product people{" "}

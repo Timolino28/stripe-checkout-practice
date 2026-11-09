@@ -4,14 +4,14 @@ import PricingCard from "@/app/components/PricingCard";
 const plans = [
   {
     name: "Basic",
-    price: "$50",
+    price: "€50",
     description: "Perfect for solo developers and personal projects.",
     features: ["1 seat", "5 projects", "Community support", "Basic analytics"],
     priceId: process.env.STRIPE_PRICE_ID_BASIC!,
   },
   {
     name: "Pro",
-    price: "$100",
+    price: "€100",
     description: "Built for teams that need more power and flexibility.",
     features: [
       "Up to 10 seats",
