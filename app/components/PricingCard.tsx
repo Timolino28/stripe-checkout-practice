@@ -84,7 +84,7 @@ export default function PricingCard({
 
       <button
         type="button"
-        className={`w-full cursor-not-allowed rounded-xl py-3 text-sm font-semibold transition-opacity hover:opacity-90 ${
+        className={`w-full cursor-pointer rounded-xl py-3 text-sm font-semibold transition-opacity hover:opacity-90 ${
           highlighted ? "bg-white text-indigo-600" : "bg-indigo-600 text-white"
         }`}
         onClick={() => createCheckoutSession({ priceId })}

@@ -42,11 +42,6 @@ export default function SuccessPage() {
           is when you should unlock access, send a receipt, or update a
           database record.
         */}
-        <p className="mt-4 rounded-lg bg-amber-50 px-4 py-3 text-xs leading-relaxed text-amber-800 ring-1 ring-inset ring-amber-200">
-          <span className="font-semibold">Learning note:</span> This redirect is
-          just UX. The authoritative confirmation of payment arrives via the
-          Stripe webhook — never trust this URL alone.
-        </p>
 
         <Link
           href="/"

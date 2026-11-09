@@ -22,12 +22,15 @@ interface CreateCheckoutSessionInput {
 export async function createCheckoutSession({
   priceId,
 }: CreateCheckoutSessionInput): Promise<void> {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  if (!baseUrl) throw new Error("NEXT_PUBLIC_BASE_URL is not set");
+
   const session = await stripe.checkout.sessions.create({
     mode: "payment",
     payment_method_types: ["card"],
     line_items: [{ price: priceId, quantity: 1 }],
-    success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/success`,
-    cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/cancel`,
+    success_url: `${baseUrl}/success`,
+    cancel_url: `${baseUrl}/cancel`,
   });
 
   redirect(session.url!);
